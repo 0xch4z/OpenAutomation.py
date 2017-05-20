@@ -1,8 +1,12 @@
 # FileTraverser.py (python3)
-## A command line applicationto automate the opening of files in python.
+## A command line application to automate the opening of files in python.
 
 ### Synopsis
-I wanted to be able to automate the opening of specific files in a specific directory with their default program. From time to time, I make my own graphics for client sites. Sometimes, many times, I make mistakes in illustrator. Mistakes such as forgetting to make the background transparent on every image in a given set. So I am faced with an issue, an easy one but a rather time consuming one. All I need to do is open the given file in illustrator and edit the opacity of the first layer. But how will I keep track of my progress. And manually opening each file would be such a pain. Thats why I made this quick little script.
+I wanted to be able to automate the opening of specific files in a given directory with their default program. This idea arose when I was faced with a problem.
+
+From time to time, I make my own graphics for client sites. Sometimes, many times, I make mistakes in illustrator. Mistakes such as forgetting to make the background transparent on every image in a given set. So I am faced with an issue, an easy one but a rather time consuming one. All I need to do is open the given file in illustrator and edit the opacity of the first layer.
+
+ But how will I keep track of my progress? With a pen and paper or memory? I'm talking about like 50 SVGs. And manually opening each file would be such a pain. Thats why I made this quick little script.
 
 ### Usage:
 1. Run the program with python 3.
