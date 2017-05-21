@@ -6,15 +6,22 @@
 #
 
 import os
+import platform
 
 def main() :
     print('please enter a valid directory and file extension to iterate over.\n')
-    ext = input('file extension: ')
-    directory = input('directory: ')
-    iterateOverFiles(ext, directory)
+    while True :
+        ext = input('file extension: ')
+        directory = input('directory: ')
+        if os.path.isdir(directory) :
+            break
+        else :
+            print('[-] Error: Invalid directory!')
+            continue
+    traverseFiles(ext, directory)
 
 # takes a file extension and a directory
-def iterateOverFiles(ext, directory) :
+def traverseFiles(ext, directory) :
     for filename in os.listdir(directory) :
         if filename.endswith(ext) :
             openFile(directory, filename)
@@ -35,6 +42,14 @@ def openFile(directory, filename) :
     fullpath += filename
     print("[+] opening file at path: {}".format(fullpath))
     os.system("open " + fullpath)
+
+def validateSystem() :
+    system = platform.platform()
+    if 'darwin' not in system.lower() :
+        print('system: {}'.format(p))
+        print("Sorry, this script is only supported on mac!")
+        exit(1)
+
 
 
 # Runtime

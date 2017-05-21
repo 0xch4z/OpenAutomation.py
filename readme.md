@@ -1,4 +1,4 @@
-# FileTraverser.py (python3)
+# OpenAutomation.py (python3)
 ## A command line application to automate the opening of files in python.
 
 ### Synopsis
@@ -18,7 +18,7 @@ From time to time, I make my own graphics for client sites. Sometimes, many time
 
 ### Example IO:
 ```
-Charless-iMac:file automation charles$ python3 fileTraverser.py
+Charless-iMac:file automation charles$ python3 openAutomation.py
 please enter a valid directory and file extension to iterate over.
 
 file extension: .svg
