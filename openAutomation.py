@@ -9,7 +9,8 @@ import os
 import platform
 
 def main() :
-    print('please enter a valid directory and file extension to iterate over.\n')
+    validateSystem()
+    print('Please enter a valid directory and file extension to iterate over.\n')
     while True :
         ext = input('file extension: ')
         directory = input('directory: ')
@@ -27,7 +28,7 @@ def traverseFiles(ext, directory) :
             openFile(directory, filename)
             # wait for user to respond
             while True :
-                response = input('enter anything to continue... ')
+                response = input('Enter anything to continue... ')
                 if not response :
                     continue
                 else :
@@ -40,13 +41,14 @@ def openFile(directory, filename) :
     if directory.endswith('/') == False :
         fullpath += '/'
     fullpath += filename
-    print("[+] opening file at path: {}".format(fullpath))
+    print("[+] Opening file at path: {}".format(fullpath))
     os.system("open " + fullpath)
 
+# verifies system is on mac os
 def validateSystem() :
     system = platform.platform()
     if 'darwin' not in system.lower() :
-        print('system: {}'.format(p))
+        print('system: {}'.format(system))
         print("Sorry, this script is only supported on mac!")
         exit(1)
 
