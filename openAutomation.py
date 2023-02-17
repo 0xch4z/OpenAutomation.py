@@ -47,7 +47,7 @@ def openFile(directory, filename) :
 # verifies system is on mac os
 def validateSystem() :
     system = platform.platform()
-    if 'darwin' not in system.lower() :
+    if 'macos' not in system.lower() :
         print('system: {}'.format(system))
         print("Sorry, this script is only supported on mac!")
         exit(1)
